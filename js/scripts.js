@@ -51,4 +51,17 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     });
 
+    // Make project cards keyboard-accessible in addition to mouse/touch interaction
+    const portfolioItems = [].slice.call(
+        document.querySelectorAll('.portfolio .portfolio-item')
+    );
+    portfolioItems.map(function (portfolioItem) {
+        portfolioItem.addEventListener('keydown', (event) => {
+            if (event.key === 'Enter' || event.key === ' ') {
+                event.preventDefault();
+                portfolioItem.click();
+            }
+        });
+    });
+
 });

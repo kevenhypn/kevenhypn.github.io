@@ -11135,3 +11135,10 @@ html {
 .copyright {
   background-color: #1a252f;
 }
+
+.col-md-4 .img-fluid {
+  height: 270px;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
